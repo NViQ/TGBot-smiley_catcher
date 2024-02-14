@@ -2,7 +2,7 @@ from aiogram import F, types, Router
 from aiogram.filters import Command
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from aiogram.handlers.callback_query import CallbackQueryHandler
-from .utils import handle_like_reaction, handle_dislike_reaction, handle_ok_hand_reaction, \
+from .utils import handle_like_reaction, handle_poo_reaction, handle_ok_hand_reaction, \
     handle_rolling_on_the_floor_laughing_reaction
 
 
@@ -25,9 +25,9 @@ async def handle_like_message(message: types.Message):
     response = handle_like_reaction()
     await message.answer(response)
 
-@router.message(F.text == "👎")
-async def handle_dislike_message(message: types.Message):
-    response = handle_dislike_reaction()
+@router.message(F.text == "💩")
+async def handle_poo_message(message: types.Message):
+    response = handle_poo_reaction()
     await message.answer(response)
 
 @router.message(F.text == "👌")
@@ -35,7 +35,7 @@ async def handle_ok_hand_message(message: types.Message):
     response = handle_ok_hand_reaction()
     await message.answer(response)
 
-@router.message(F.text == "🤣")
+@router.message(F.text == "💩")
 async def handle_rolling_on_the_floor_laughing_message(message: types.Message):
     response = handle_rolling_on_the_floor_laughing_reaction()
     await message.answer(response)
