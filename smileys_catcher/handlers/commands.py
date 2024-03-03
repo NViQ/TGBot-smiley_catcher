@@ -1,4 +1,4 @@
-from aiogram import types, Router
+from aiogram import F, types, Router
 from aiogram.filters import Command
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from .utils import handle_like_reaction, handle_poo_reaction, handle_ok_hand_reaction, \
